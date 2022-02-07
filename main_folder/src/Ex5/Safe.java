@@ -29,14 +29,11 @@ public class Safe {
             for (Integer i : indexes) {
                 sum_volume += arr[i].volume;
                 sum_value += arr[i].value;
-                //System.out.print("("+arr[i].volume + ":" + arr[i].value + ") ");
             }
-            //System.out.print("= ("+sum_volume+":"+sum_value+")");
             if (sum_volume <= this.safe && this.matrix[(expectedSize - 1) * 2 + 1] <= sum_value) {
                 this.matrix[(expectedSize - 1) * 2] = sum_volume;
                 this.matrix[(expectedSize - 1) * 2 + 1] = sum_value;
             }
-            //System.out.println();
             return;
         }
         for (int i = 0; i < arr.length; i++) {
